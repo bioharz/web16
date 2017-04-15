@@ -14,7 +14,11 @@ import org.apache.logging.log4j.LogManager;
  */
 public class Aufruf {
 
+    //FUR 2.8.2
     private static final Logger logger = LogManager.getLogger(Aufruf.class);
+
+    //FUER 1.2
+    //static Logger logger = Logger.getLogger(Aufruf.class);
 
     //CREATE SOME TEST USER
     static private User[] users = new User[3];
@@ -53,7 +57,7 @@ public class Aufruf {
 
     }
 
-    private static void checkLogin(String username, String password) throws UnknownUserException, CredentialException {
+    private static void checkLogin(String username, String password) throws UnknownUserException, PasswordWrongException {
 
         boolean goodUserName = false;
 
@@ -65,7 +69,7 @@ public class Aufruf {
                     System.out.println("CORRECT PASSWORD");
                     break;
                 } else {
-                    throw new CredentialException();
+                    throw new PasswordWrongException("PASSWORD WRONG");
                 }
             }
         }

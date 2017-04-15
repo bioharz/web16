@@ -26,20 +26,22 @@ public class Aufruf {
 
     }
 
-    static boolean isPasswordSecure(String password){
-        if (    password.length() >= 6 &&
-                (       password.contains("!") ||
+    static boolean isPasswordSecure(String password) {
+        if (password.length() >= 6 &&
+
+                (password.contains("!") ||
                         password.contains("?") ||
                         password.contains("&")
                 ) &&
                 password.matches(".*\\d+.*")
-            ) {
-            System.out.println("good passwd, the last 3 chart of the pw: "+password.substring(password.length()-3,password.length()));
+                ) {
+            System.out.println("good passwd, the last 3 chart of the pw: " + password.substring(password.length() - 3));
             return true;
-        }
-        else {
-             System.err.println("BAD PASSWORD!!!!");
+        } else {
+            System.err.println("BAD PASSWORD!!!!");
             return false;
         }
-    };
+    }
+
+    ;
 }

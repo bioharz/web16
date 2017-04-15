@@ -16,21 +16,21 @@ public class Huerdenlauf {
         System.out.println("Startschuss");
         for (int meterCounter = 0; meterCounter <= GES_LAUF; meterCounter++) {
 
-            if(meterCounter != 0 && meterCounter != GES_LAUF) {
+            if (meterCounter != 0 && meterCounter != GES_LAUF) {
 
                 if (meterCounter % OUTER_LOOP_COUNTER == 0) {
                     innerLoopCounter++;
-                    System.out.println("Der Läufter befindet sich in der "+innerLoopCounter+" Runde.");
+                    System.out.println("Der Läufter befindet sich in der " + innerLoopCounter + " Runde.");
                 }
 
-                if (meterCounter % (OUTER_LOOP_COUNTER/HURDLES) == 0) {
+                if (meterCounter % (OUTER_LOOP_COUNTER / HURDLES) == 0) {
                     hurdleCounter++;
                     if (hurdleCounter == 24) System.out.println("go go go");
-                    System.out.println(hurdleCounter+" Hürde Überwunden");
+                    System.out.println(hurdleCounter + " Hürde Überwunden");
                 }
 
             }
-            if (meterCounter == (GES_LAUF/2)) System.out.println("Häfte geschafft");
+            if (meterCounter == (GES_LAUF / 2)) System.out.println("Häfte geschafft");
             if (meterCounter == GES_LAUF) System.out.println("Ziel geschafft");
 
         }

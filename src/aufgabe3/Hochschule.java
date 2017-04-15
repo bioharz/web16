@@ -54,7 +54,7 @@ public class Hochschule {
         this.ort = ort;
     }
 
-    public void neuerStudent(Student student) throws Exception {
+    public void neuerStudent(Student student) {
 
         this.studentenliste.add(student);
         anzahlStudenten++;
