@@ -9,7 +9,6 @@
             This class contains student details.
         </meta>
         <id name="pkz" type="string" column="pkz">
-            <generator class="native"/>
         </id>
         <property name="firstname" column="firstname" type="string"/>
         <property name="surName" column="surname" type="string"/>
