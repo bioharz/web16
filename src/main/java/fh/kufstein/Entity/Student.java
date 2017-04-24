@@ -1,4 +1,4 @@
-package fh.kufstein;
+package fh.kufstein.Entity;
 
 import java.util.Date;
 
@@ -12,10 +12,10 @@ public class Student {
     private String surName;
     private Date birthday;
 
-    public Student(String pkz, String firstname, String nachname, Date birthday) {
+    public Student(String pkz, String firstname, String surname, Date birthday) {
         this.pkz = pkz;
         this.firstname = firstname;
-        this.surName = nachname;
+        this.surName = surname;
         this.birthday = birthday;
     }
 

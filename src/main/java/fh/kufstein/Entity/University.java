@@ -1,4 +1,4 @@
-package fh.kufstein;
+package fh.kufstein.Entity;
 
 import java.util.ArrayList;
 import java.util.List;

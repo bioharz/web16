@@ -1,5 +1,7 @@
 package fh.kufstein;
 
+import fh.kufstein.Entity.University;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
@@ -15,10 +17,15 @@ public class Main {
         University fhKufstein = new University("FH-Kufstein", 3, "Kufstein");
 
 
+        /*
         for (int i = 0; i < 3; i++) {
             fhKufstein.neuerStudent(new Student("151065303" + i, "Reza" + i, "Shokri" + i, formatter.parse("21.02.199" + i)));
             fhKufstein.pintInfo();
         }
+        */
+
+
+
 
     }
 }
