@@ -1,16 +1,20 @@
 package fh.kufstein.Entity;
 
+import javax.persistence.EntityListeners;
 import java.util.Date;
 
 /**
  * Created by bioharz on 11/04/17.
  */
-public class Student {
+
+public  class Student {
 
     private String pkz;
     private String firstname;
     private String surName;
     private Date birthday;
+
+    public Student() {}
 
     public Student(String pkz, String firstname, String surname, Date birthday) {
         this.pkz = pkz;
@@ -45,6 +49,10 @@ public class Student {
 
     public Date getBirthday() {
         return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
     }
 
     public void setDate(Date gbDate) {

@@ -3,9 +3,7 @@ package fh.kufstein.Dao;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.List;
 import java.util.Date;
-import java.util.Iterator;
 
 import fh.kufstein.Entity.Student;
 import org.hibernate.HibernateException;
@@ -29,7 +27,7 @@ public class StudentDao {
 
 
         try{
-            Configuration  configuration = new Configuration().configure("/resources/hibernate.cfg.xml");
+            //Configuration  configuration = new Configuration().configure("hibernate.cfg.xml");
             //return  configuration.buildSessionFactory();
 
             factory = new Configuration().configure().buildSessionFactory();
@@ -63,11 +61,11 @@ public class StudentDao {
     public String addStudent(String pkz, String firstName, String lastName, Date birthday){
         Session session = factory.openSession();
         Transaction tx = null;
-        String pkzID = null;
+        //String pkzID = null;
         try{
             tx = session.beginTransaction();
             Student student = new Student(pkz, firstName, lastName, birthday);
-            pkzID = (String) session.save(student);
+            //pkzID = (String) session.save(student);
             //employeeID = (Integer) session.save(employee);
             tx.commit();
         }catch (HibernateException e) {
@@ -76,7 +74,8 @@ public class StudentDao {
         }finally {
             session.close();
         }
-        return pkzID;
+        //return pkzID;
+        return pkz;
     }
     /* Method to  READ all the employees */
 
