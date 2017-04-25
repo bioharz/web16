@@ -31,7 +31,7 @@ public class Main {
 
         SessionFactory factory = new DBConnector().getSessionFactory();
 
-
+        System.exit(0);
 
 
     }
