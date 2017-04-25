@@ -1,6 +1,7 @@
 package fh.kufstein;
 
 
+import fh.kufstein.Dao.StudentDao;
 import fh.kufstein.Entity.Student;
 import fh.kufstein.Entity.University;
 
@@ -20,16 +21,13 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        //DateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
+        DateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
+
+        //Student student1 = new StudentDao().addStudent("1510653032", "Reza", "Shokri", formatter.parse("21.01.1991"));
+        //Student student2 = new StudentDao().addStudent("1510653033", "Reza2", "Shokri2", formatter.parse("21.01.1992"));
+        //Student student3 = new StudentDao().addStudent("1510653034", "Reza3", "Shokri3", formatter.parse("21.01.1993"));
 
 
-
-        //System.exit(0);
-
-
-        //private SessionFactory factory = new DBConnector().getSessionFactory();
-
-        SessionFactory factory = new DBConnector().getSessionFactory();
 
         System.exit(0);
 
