@@ -3,6 +3,8 @@ package fh.kufstein;
 
 import fh.kufstein.Entity.Student;
 import fh.kufstein.Entity.University;
+
+import fh.kufstein.Utility.DBConnector;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
@@ -18,11 +20,19 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        DateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
+        //DateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
 
 
 
-        System.exit(0);
+        //System.exit(0);
+
+
+        //private SessionFactory factory = new DBConnector().getSessionFactory();
+
+        SessionFactory factory = new DBConnector().getSessionFactory();
+
+
+
 
     }
 }
