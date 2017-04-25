@@ -27,7 +27,9 @@ public class Main {
         //Student student2 = new StudentDao().addStudent("1510653033", "Reza2", "Shokri2", formatter.parse("21.01.1992"));
         //Student student3 = new StudentDao().addStudent("1510653034", "Reza3", "Shokri3", formatter.parse("21.01.1993"));
 
+        Student student1 = new StudentDao().getStudentByPKZ("1510653032");
 
+        System.out.println(student1);
 
         System.exit(0);
 

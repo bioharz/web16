@@ -60,9 +60,7 @@ public class StudentDao {
     } finally {
         session.close();
     }
-
-
-        return student;
+        return result;
     }
 
 }
