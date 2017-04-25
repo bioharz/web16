@@ -1,11 +1,15 @@
 package fh.kufstein.Entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by bioharz on 11/04/17.
  */
+//@Entity
+//@Table(name = "university")
 public class University {
 
     private String description;

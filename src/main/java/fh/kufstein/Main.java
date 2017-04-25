@@ -22,23 +22,39 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
+        StudentDao studentDao = new StudentDao();
+
         DateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
 
-        //Student student1 = new StudentDao().addStudent("1510653032", "Reza", "Shokri", formatter.parse("21.01.1991"));
-        //Student student2 = new StudentDao().addStudent("1510653033", "Reza2", "Shokri2", formatter.parse("21.01.1992"));
-        //Student student3 = new StudentDao().addStudent("1510653034", "Reza3", "Shokri3", formatter.parse("21.01.1993"));
+        //Student student1 = studentDao.addStudent("1510653032", "Reza", "Shokri", formatter.parse("21.01.1991"));
+        //Student student2 = studentDao.addStudent("1510653033", "Reza2", "Shokri2", formatter.parse("21.01.1992"));
+        //Student student3 = studentDao.addStudent("1510653034", "Reza3", "Shokri3", formatter.parse("21.01.1993"));
 
-        //Student student1 = new StudentDao().getStudentByPKZ("1510653032");
+        //Student student1 = studentDao.getStudentByPKZ("1510653032");
 
 
         //System.out.println(student1);
 
-        List<Student> studentList = new StudentDao().getAllStudents();
+        List<Student> studentList = studentDao.getAllStudents();
 
         for (Student student: studentList
              ) {
             System.out.println(student);
         }
+
+        boolean isDel = studentDao.deleteStudentByPKZ("1510653033");
+
+        System.out.println("isDel?: "+isDel);
+
+        /*
+        studentList = studentDao.getAllStudents();
+
+        for (Student student: studentList
+                ) {
+            System.out.println(student);
+        }
+        */
+
 
         System.exit(0);
 
