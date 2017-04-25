@@ -1,7 +1,5 @@
-package aufgabe3;
+package fh.kufstein;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 

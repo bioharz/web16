@@ -1,9 +1,7 @@
-package aufgabe3;
+package fh.kufstein;
 
 import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 /**
  * Created by bioharz on 11/04/17.

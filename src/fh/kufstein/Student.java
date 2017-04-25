@@ -1,4 +1,4 @@
-package aufgabe3;
+package fh.kufstein;
 
 import java.util.Date;
 
