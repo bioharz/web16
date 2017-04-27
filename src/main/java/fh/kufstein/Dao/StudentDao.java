@@ -8,6 +8,7 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by 1510653032 on 27.04.2017.
@@ -61,6 +62,29 @@ public class StudentDao {
         return result;
     }
 
+
+
+    public List<Student> getAllStudents() {
+
+        Session session = factory.openSession();
+        Transaction tx = null;
+        List<Student> resultList = null;
+
+        try {
+            tx = session.beginTransaction();
+            String hql = "FROM Student";
+            Query query = session.createQuery(hql);
+            resultList = query.getResultList();
+            tx.commit();
+        } catch (Exception e) {
+            if (tx != null) tx.rollback();
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+
+        return resultList;
+    }
 
 
 }

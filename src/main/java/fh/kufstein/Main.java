@@ -21,7 +21,11 @@ public class Main {
 
         StudentDao studentDao = new StudentDao();
 
-        Student student1 = studentDao.addStudent("1510653032", "Reza", "Shokri", formatter.parse("21.02.1991"));
+        Student student2 = studentDao.addStudent("1510653033", "Reza2", "Shokri2", formatter.parse("21.02.1992"));
+        Student student3 = studentDao.addStudent("1510653034", "Reza3", "Shokri3", formatter.parse("21.02.1993"));
+
+
+
 
         System.exit(0);
 
