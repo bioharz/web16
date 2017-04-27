@@ -1,6 +1,7 @@
 package fh.kufstein;
 
 import fh.kufstein.Dao.StudentDao;
+import fh.kufstein.Dao.UniversityDao;
 import fh.kufstein.Entity.Student;
 import fh.kufstein.Entity.University;
 import fh.kufstein.Utility.DBConnector;
@@ -21,6 +22,7 @@ public class Main {
         DateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
 
         StudentDao studentDao = new StudentDao();
+        UniversityDao universityDao = new UniversityDao();
 
         //Student student2 = studentDao.addStudent("1510653033", "Reza2", "Shokri2", formatter.parse("21.02.1992"));
         //Student student3 = studentDao.addStudent("1510653034", "Reza3", "Shokri3", formatter.parse("21.02.1993"));
@@ -34,10 +36,16 @@ public class Main {
         }
 */
 
-        boolean isDeleted = studentDao.deleteStudentByPKZ("1510653034");
+        //boolean isDeleted = studentDao.deleteStudentByPKZ("1510653034");
 
 
-        System.out.println("isDeleted?: "+isDeleted);
+        //System.out.println("isDeleted?: "+isDeleted);
+
+
+        //University fhkufstein = universityDao.addUniversity("FH KUF", 42, "Kufstein");
+
+
+
 
         System.exit(0);
 

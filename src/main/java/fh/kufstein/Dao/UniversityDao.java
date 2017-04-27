@@ -24,8 +24,8 @@ public class UniversityDao {
 
         try {
             tx = session.beginTransaction();
-            university = new University();
-            session.save(student);
+            university = new University(description, studentCounter, city);
+            session.save(university);
             tx.commit();
         } catch (Exception e) {
             if (tx != null) tx.rollback();
@@ -34,7 +34,7 @@ public class UniversityDao {
             session.close();
         }
 
-        return student;
+        return university;
     }
 
 }
