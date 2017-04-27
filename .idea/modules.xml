@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/web16_s-ue_s1_klausur.iml" filepath="$PROJECT_DIR$/web16_s-ue_s1_klausur.iml" />
+      <module fileurl="file://$PROJECT_DIR$/web16.iml" filepath="$PROJECT_DIR$/web16.iml" />
     </modules>
   </component>
 </project>
