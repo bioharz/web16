@@ -66,7 +66,7 @@ public class University {
         System.out.println("University{" +
                 "becheinung='" + description + '\'' +
                 ", studentCounter=" + studentCounter +
-    //            ", Studiengaenge=" + Studiengaenge +
+                //            ", Studiengaenge=" + Studiengaenge +
                 ", studentList=" + studentList +
                 ", city='" + city + '\'' +
                 '}');
