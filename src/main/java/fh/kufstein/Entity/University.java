@@ -1,23 +1,41 @@
 package fh.kufstein.Entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by bioharz on 11/04/17.
  */
+@Entity
+@Table(name = "unversity")
 public class University {
 
+    @Id
+    @Column(name = "description")
     private String description;
+    @Column(name = "studentcounter")
     private int studentCounter;
     //private int Studiengaenge;
-    private List<Student> studentList = new ArrayList<>();
+    //private List<Student> studentList = new ArrayList<>();
+    @Column(name = "city")
     private String city;
 
-    public University(String description, int studiengaenge, String city) {
+    public University(String description, int studentCounter, String city) {
         this.description = description;
+        this.studentCounter = studentCounter;
         //Studiengaenge = studiengaenge;
         this.city = city;
+    }
+
+    public University() {
+    }
+
+    public void setStudentCounter(int studentCounter) {
+        this.studentCounter = studentCounter;
     }
 
     public String getDescription() {
@@ -34,9 +52,11 @@ public class University {
     }
     */
 
+    /*
     public List<Student> getStudentList() {
         return studentList;
     }
+    */
 
     public String getCity() {
         return city;
@@ -56,9 +76,10 @@ public class University {
         this.city = city;
     }
 
+
     public void neuerStudent(Student student) {
 
-        this.studentList.add(student);
+        //this.studentList.add(student);
         studentCounter++;
     }
 
@@ -67,7 +88,7 @@ public class University {
                 "becheinung='" + description + '\'' +
                 ", studentCounter=" + studentCounter +
                 //            ", Studiengaenge=" + Studiengaenge +
-                ", studentList=" + studentList +
+                ", studentList=" +
                 ", city='" + city + '\'' +
                 '}');
     }
