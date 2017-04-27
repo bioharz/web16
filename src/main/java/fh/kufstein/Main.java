@@ -1,5 +1,6 @@
 package fh.kufstein;
 
+import fh.kufstein.Dao.StudentDao;
 import fh.kufstein.Entity.Student;
 import fh.kufstein.Entity.University;
 import fh.kufstein.Utility.DBConnector;
@@ -18,6 +19,9 @@ public class Main {
 
         DateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
 
+        StudentDao studentDao = new StudentDao();
+
+        Student student1 = studentDao.addStudent("1510653032", "Reza", "Shokri", formatter.parse("21.02.1991"));
 
         System.exit(0);
 
