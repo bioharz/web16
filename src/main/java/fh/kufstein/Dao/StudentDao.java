@@ -87,4 +87,30 @@ public class StudentDao {
     }
 
 
+
+    public boolean deleteStudentByPKZ(String pkz) {
+
+        Session session = factory.openSession();
+        Transaction tx = null;
+
+        boolean result = false;
+
+        try {
+            tx = session.beginTransaction();
+            Student student = (Student) session.get(Student.class, pkz);
+            session.delete(student);
+            tx.commit();
+            result = true;
+        } catch (Exception e) {
+            result = false;
+            if (tx != null) tx.rollback();
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+
+        return result;
+    }
+
+
 }
