@@ -1,6 +1,5 @@
 package fh.kufstein.Entity;
 
-import javax.persistence.EntityListeners;
 import java.util.Date;
 
 /**
